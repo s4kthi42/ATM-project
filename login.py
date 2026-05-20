@@ -6,7 +6,7 @@ class ATMLogin:
     def __init__(self):
 
         self.user_id = "1234567890"
-        self.pin = "1234"
+        self.pin = "123"
 
     def login(self):
 
