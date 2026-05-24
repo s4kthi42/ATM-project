@@ -8,19 +8,31 @@ class ATMLogin:
 
         self.user_id = "1234567890"
         self.pin = "123"
+
         self.lang = translations[language]
 
     def login(self):
 
+        print("\n" + "=" * 40)
         print(self.lang["welcome"])
+        print("=" * 40)
 
-        entered_user_id = input(self.lang["enter_user"])
-        entered_pin = getpass.getpass(self.lang["enter_pin"])
+        entered_user_id = input(
+            self.lang["enter_user"]
+        )
+
+        entered_pin = getpass.getpass(
+            self.lang["enter_pin"]
+        )
 
         if entered_user_id == self.user_id and entered_pin == self.pin:
 
             print("\n" + self.lang["success"])
 
+            return True
+
         else:
 
             print("\n" + self.lang["invalid"])
+
+            return False
