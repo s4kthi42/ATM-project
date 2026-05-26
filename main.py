@@ -1,3 +1,7 @@
+import os
+
+os.system("chcp 65001")
+
 from language import Language
 from login import ATMLogin
 from menu import ATMMenu
