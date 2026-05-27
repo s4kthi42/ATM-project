@@ -24,8 +24,7 @@ def _random_name():
              "Jain","Joshi","Kapoor","Kaur","Khan","Khanna","Kumar","Lal","Malhotra","Mehta",
              "Mishra","Mukherjee","Nair","Naidu","Pandey","Patel","Patil","Pillai","Raj","Rao",
              "Reddy","Saha","Sharma","Shukla","Singh","Sinha","Srinivasan","Subramanian","Tiwari",
-             "Tripathi","Varma","Verma","Yadav","Fernandes","Fernandez","Chowdhury","Goswami","Devi",
-             "Bajaj","Bose"]
+             "Tripathi","Varma","Verma","Yadav","Fernandes","Chowdhury","Goswami","Devi","Bajaj","Bose"]
     return f"{random.choice(first)} {random.choice(last)}"
 
 def _random_pin():
@@ -76,7 +75,6 @@ def initialize_db():
         print("[DB] Seeding 1000 accounts ...")
         existing = set()
 
-        # 3 fixed demo accounts
         demo = [
             ("1001111111","1234","Alice Johnson",  25000.00,"en"),
             ("1002222222","5678","Bob Smith",       12500.50,"en"),
@@ -89,7 +87,6 @@ def initialize_db():
             demo
         )
 
-        # 997 random accounts
         rand_accs = []
         for _ in range(997):
             num  = _random_acc(existing)
@@ -103,7 +100,6 @@ def initialize_db():
             rand_accs
         )
 
-        # ~5 transactions per account
         print("[DB] Seeding transactions ...")
         all_accs  = list(demo) + rand_accs
         txn_batch = []

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 TRANSLATIONS = {
     "en": {
         "welcome":          "Welcome to the ATM",
@@ -36,7 +35,7 @@ TRANSLATIONS = {
         "enter_account":    "கணக்கு எண் உள்ளிடவும்: ",
         "enter_pin":        "PIN உள்ளிடவும்: ",
         "invalid_login":    "தவறான கணக்கு எண் அல்லது PIN.",
-        "account_locked":   "உங்கள் கணக்கு பூட்டப்பட்டுள்ளது. ஆதரவை தொடர்பு கொள்ளவும்.",
+        "account_locked":   "உங்கள் கணக்கு பூட்டப்பட்டுள்ளது.",
         "login_success":    "உள்நுழைவு வெற்றிகரமானது. வரவேற்கிறோம், {}!",
         "select_option":    "ஒரு விருப்பத்தைத் தேர்ந்தெடுக்கவும்:",
         "balance":          "இருப்பு பார்க்க",
@@ -45,10 +44,10 @@ TRANSLATIONS = {
         "change_pin":       "PIN மாற்ற",
         "statement":        "சிறு அறிக்கை",
         "logout":           "வெளியேறு",
-        "current_balance":  "தற்போதைய இருப்பு: ₹{:.2f}",
-        "enter_amount":     "தொகை உள்ளிடவும்: ₹",
-        "deposit_success":  "₹{:.2f} வெற்றிகரமாக டெபாசிட் செய்யப்பட்டது.",
-        "withdraw_success": "₹{:.2f} வெற்றிகரமாக எடுக்கப்பட்டது.",
+        "current_balance":  "தற்போதைய இருப்பு: Rs.{:.2f}",
+        "enter_amount":     "தொகை உள்ளிடவும்: Rs.",
+        "deposit_success":  "Rs.{:.2f} வெற்றிகரமாக டெபாசிட் செய்யப்பட்டது.",
+        "withdraw_success": "Rs.{:.2f} வெற்றிகரமாக எடுக்கப்பட்டது.",
         "insufficient":     "போதுமான நிதி இல்லை.",
         "invalid_amount":   "தவறான தொகை.",
         "enter_old_pin":    "தற்போதைய PIN உள்ளிடவும்: ",
@@ -67,31 +66,3 @@ TRANSLATIONS = {
 def get_text(lang, key, *args):
     text = TRANSLATIONS.get(lang, TRANSLATIONS["en"]).get(key, key)
     return text.format(*args) if args else text
-=======
-translations = {
-
-    "english": {
-        "welcome": "WELCOME TO ATM",
-        "enter_user": "Enter User ID: ",
-        "enter_pin": "Enter PIN: ",
-        "success": "Login Successful",
-        "invalid": "Invalid User ID or PIN"
-    },
-
-    "tamil": {
-        "welcome": "ATM-க்கு வரவேற்கிறோம்",
-        "enter_user": "பயனர் ஐடியை உள்ளிடவும்: ",
-        "enter_pin": "PIN எண்ணை உள்ளிடவும்: ",
-        "success": "உள்நுழைவு வெற்றி",
-        "invalid": "தவறான பயனர் ஐடி அல்லது PIN"
-    },
-
-    "hindi": {
-        "welcome": "एटीएम में आपका स्वागत है",
-        "enter_user": "यूज़र आईडी दर्ज करें: ",
-        "enter_pin": "पिन दर्ज करें: ",
-        "success": "लॉगिन सफल",
-        "invalid": "गलत यूज़र आईडी या पिन"
-    }
-}
->>>>>>> 9347a5d93bf86052ecc438037165a874bc4a57fa

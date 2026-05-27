@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from database import get_connection
 from translations import get_text
 
@@ -27,23 +26,3 @@ def deposit(account_number, lang="en"):
     conn.close()
     print(t("deposit_success", amount))
     print(t("current_balance", new_balance))
-=======
-class Deposit:
-
-    def deposit_money(self, balance, transactions):
-
-        print("\n" + "=" * 40)
-        print("DEPOSIT MONEY")
-        print("=" * 40)
-
-        amount = float(input("Enter Deposit Amount: ₹"))
-
-        balance += amount
-
-        transactions.append(f"Deposited ₹{amount}")
-
-        print("Amount Deposited Successfully")
-        print(f"Updated Balance: ₹{balance}")
-
-        return balance
->>>>>>> 9347a5d93bf86052ecc438037165a874bc4a57fa

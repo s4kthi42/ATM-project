@@ -19,15 +19,12 @@ def main():
     print("\n" + "="*35)
     print("       WELCOME TO PYTHON ATM")
     print("="*35)
-
     initialize_db()
-
     while True:
         lang        = select_language()
         account_num = login(lang)
         if account_num:
             show_menu(account_num, lang)
-
         again = input("\nUse ATM again? (y/n): ").strip().lower()
         if again != "y":
             print("Goodbye!\n")

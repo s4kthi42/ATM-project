@@ -1,0 +1,5 @@
+atm_database.db
+__pycache__/
+*.pyc
+*.pyo
+.env
