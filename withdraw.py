@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from database import get_connection
 from translations import get_text
 
@@ -31,3 +32,29 @@ def withdraw(account_number, lang="en"):
     conn.close()
     print(t("withdraw_success", amount))
     print(t("current_balance", new_balance))
+=======
+class Withdraw:
+
+    def withdraw_money(self, balance, transactions):
+
+        print("\n" + "=" * 40)
+        print("WITHDRAW MONEY")
+        print("=" * 40)
+
+        amount = float(input("Enter Withdraw Amount: ₹"))
+
+        if amount <= balance:
+
+            balance -= amount
+
+            transactions.append(f"Withdrawn ₹{amount}")
+
+            print("Please Collect Your Cash")
+            print(f"Remaining Balance: ₹{balance}")
+
+        else:
+
+            print("Insufficient Balance")
+
+        return balance  
+>>>>>>> 9347a5d93bf86052ecc438037165a874bc4a57fa

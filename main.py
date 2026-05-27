@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 ATM System - Main Entry Point
 ==============================
@@ -39,3 +40,45 @@ def main():
 
 if __name__ == "__main__":
     main()
+=======
+import os
+
+os.system("chcp 65001")
+
+from language import Language
+from login import ATMLogin
+from menu import ATMMenu
+
+
+def main():
+
+    print("=" * 40)
+    print("ATM MACHINE SYSTEM")
+    print("=" * 40)
+
+    # Language Selection
+    language = Language()
+
+    selected_language = language.choose_language()
+
+    # Login
+    atm = ATMLogin(selected_language)
+
+    login_success = atm.login()
+
+    # Open Menu Only If Login Success
+    if login_success:
+
+        menu = ATMMenu()
+
+        menu.show_menu()
+
+    else:
+
+        print("Login Failed")
+
+
+if __name__ == "__main__":
+
+    main()
+>>>>>>> 9347a5d93bf86052ecc438037165a874bc4a57fa
